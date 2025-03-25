@@ -1,0 +1,17 @@
+{
+    "manifest_version": 3,
+    "name": "SMS Spam Detector",
+    "version": "1.0",
+    "description": "Detect spam messages directly from your browser.",
+    "icons": {
+        "128": "icon.png"
+    },
+    "permissions": [
+        "activeTab",
+        "storage"
+    ],
+    "action": {
+        "default_popup": "popup.html",
+        "default_icon": "icon.png"
+    }
+}
