@@ -2,6 +2,10 @@
 
 This project is a **Chrome Extension** that detects SMS spam using a **Machine Learning Model** implemented with Python and Flask for the backend. The model is trained on a dataset of SMS messages and classifies them as **spam** or **ham (not spam)**. The extension allows users to check messages in real time for potential spam content.
 
+## API Link 
+https://sms-spam-detector-zhys.onrender.com/predict
+(Deployed via Render)
+
 ## Screenshots
 ![Screenshot 2025-03-26 221903](https://github.com/user-attachments/assets/114a1a94-2124-4158-8029-ddea2de9b7e3)
 
@@ -31,10 +35,18 @@ conda activate venv/
 ```
 pip install -r backend/requirements.txt
 ```
-### 6. Running
+### 6. Running API locally
 ```
 python backend/app.py
 ```
+API runs on `http://127.0.0.1:5000/predict`
+
+### 7. Running API via docker
+```
+docker build -t sms-spam-detector .
+docker run -p 5000:5000 sms-spam-detector
+```
+API runs on `http://localhost:5000/predict`
 
 ## Setting Up the Chrome Extension
 1. Open **Google Chrome** and go to `chrome://extensions/`.
