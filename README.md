@@ -1,10 +1,13 @@
-# SMS Spam Detection Chrome Extension
+![diagram-export-3-26-2025-10_35_36-PM](https://github.com/user-attachments/assets/2930ce8f-4509-4011-a960-37fa540b4f82)# SMS Spam Detection Chrome Extension
 
 This project is a **Chrome Extension** that detects SMS spam using a **Machine Learning Model** implemented with Python and Flask for the backend. The model is trained on a dataset of SMS messages and classifies them as **spam** or **ham (not spam)**. The extension allows users to check messages in real time for potential spam content.
 
 ## Screenshots
 ![Screenshot 2025-03-26 221903](https://github.com/user-attachments/assets/114a1a94-2124-4158-8029-ddea2de9b7e3)
 
+## Workflow Diagram
+
+![diagram-export-3-26-2025-10_35_36-PM](https://github.com/user-attachments/assets/e20e00b7-ac80-4224-b777-f8f1896f5e0a)
 
 ## Installation and Setup
 
