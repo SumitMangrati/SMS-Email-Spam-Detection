@@ -1,13 +1,14 @@
+import os
 import pickle
 import numpy as np
 import string
-from nltk.corpus import stopwords
 import nltk
+from nltk.corpus import stopwords
 from nltk.stem.porter import PorterStemmer
 from flask import Flask, request, jsonify
 from flask_cors import CORS  # Allows communication with the extension
 
-nltk.download('punkt')
+nltk.download('punkt_tab')
 nltk.download('stopwords')
 
 ps = PorterStemmer()
@@ -41,9 +42,18 @@ def transform_text(text):
 app = Flask(__name__)
 CORS(app)  # Enable CORS for API access
 
+# Define absolute paths to model files
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))  # Get the directory of app.py
+MODEL_PATH = os.path.join(BASE_DIR, "model.pkl")
+VECTORIZER_PATH = os.path.join(BASE_DIR, "vectorizer.pkl")
+
 # Load the trained model and vectorizer
-model = pickle.load(open('model.pkl', 'rb'))
-tfidf = pickle.load(open('vectorizer.pkl', 'rb'))
+try:
+    model = pickle.load(open(MODEL_PATH, "rb"))
+    tfidf = pickle.load(open(VECTORIZER_PATH, "rb"))
+except FileNotFoundError as e:
+    print(f"Error: {e}")
+
 
 @app.route('/')
 def home():
