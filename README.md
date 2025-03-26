@@ -3,17 +3,18 @@
 This project is a **Chrome Extension** that detects SMS spam using a **Machine Learning Model** implemented with Python and Flask for the backend. The model is trained on a dataset of SMS messages and classifies them as **spam** or **ham (not spam)**. The extension allows users to check messages in real time for potential spam content.
 
 ## Screenshots
-![images](https://github.com/user-attachments/assets/9e004c7f-6fb8-46ed-8882-66fde5e47af0)
+![Screenshot 2025-03-26 221903](https://github.com/user-attachments/assets/114a1a94-2124-4158-8029-ddea2de9b7e3)
+
 
 ## Installation and Setup
 
 ### 1. Clone the Repository
 ```
-git clone
+git clone https://github.com/SumitMangrati/SMS-Email-Spam-Detection.git
 ```
 ### 2. Navigate to the project directory
 ```
-cd
+cd SMS-Email-Spam-Detection
 ```
 ### 3. Create a new environment
 ```
